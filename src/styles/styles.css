@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  text-align: center;
+  width: 700px;
+  flex-direction: column;
+  margin: auto;
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #6d6a6a8c;
+  height: 100px;
+  width: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 60px;
+  align-items: center;
+}
+
+.btn-panel {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+}
