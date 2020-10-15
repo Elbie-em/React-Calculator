@@ -2,6 +2,7 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import Button from './Button';
+import '../styles/styles.css';
 
 const buttonSyms = [
   ['AC', '+/-', '%', '÷'],
@@ -14,7 +15,7 @@ const buttonSyms = [
 const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
-        <div key={group}>
+        <div className="btn-panel" key={group}>
           {group.map(sym => <Button key={sym} name={sym}>{sym}</Button>)}
         </div>
       ))}
