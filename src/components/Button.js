@@ -9,3 +9,7 @@ const Button = ({name}) => {
   )
 };
 
+Button.propTypes = {
+  name: PropTypes.string.isRequired,
+}
+
