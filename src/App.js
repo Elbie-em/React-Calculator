@@ -1,8 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './styles.css'
+import './styles.css';
 
-const App = () => {
-  return (
+const App = () => (
     <div className="app">
       <header>
         <p>
@@ -17,7 +17,6 @@ const App = () => {
         </a>
       </header>
     </div>
-  );
-}
+);
 
 export default App;
