@@ -10,19 +10,41 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: #6d6a6a8c;
+  background-color: #858694;
   height: 100px;
   width: 100%;
   color: #ffffff;
   font-weight: bold;
-  padding: 10px;
   font-size: 60px;
   align-items: center;
 }
 
-.btn-panel {
+.res {
+  padding-right: 10px;
+}
+
+
+
+.btn-group {
   display: flex;
   flex-direction: row;
   height: 100px;
   width: 100%;
+}
+
+.btn {
+  width: 25%;
+  height: 100%;
+  color: #000000;
+  border: 2px solid #dbdbdb;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.btn-wide {
+  width: 50%;
+}
+
+.btn-sign {
+  background-color: #f5913e;
 }
