@@ -3,7 +3,7 @@ Building a calculator for Math-magicians Inc bootstrapped with [Create React App
 
 # Live Demo
 
-> Click [here]() for live demo
+> Click [here](https://mminc-calc.herokuapp.com/) for live demo
 
 ![screenshot](public/app-img.png)
 
