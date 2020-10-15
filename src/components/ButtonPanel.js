@@ -15,7 +15,7 @@ const buttonSyms = [
 const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
-        <div className="btn-panel" key={group}>
+        <div className="btn-group" key={group}>
           {group.map(sym => <Button key={sym} name={sym}>{sym}</Button>)}
         </div>
       ))}
