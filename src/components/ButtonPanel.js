@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import Button from './Button';
 
 const buttonSyms = [
@@ -9,8 +11,7 @@ const buttonSyms = [
   ['0', '.', '='],
 ];
 
-const ButtonPanel = () => {
-  return (
+const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
         <div key={group}>
@@ -18,7 +19,6 @@ const ButtonPanel = () => {
         </div>
       ))}
     </div>
-  )
-};
+);
 
 export default ButtonPanel;
