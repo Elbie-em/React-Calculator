@@ -5,7 +5,7 @@ import '../styles/styles.css';
 
 const Display = ({ result }) => (
     <div className="display">
-      {result}
+      <span className="res">{result}</span>
     </div>
 );
 
