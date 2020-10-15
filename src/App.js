@@ -1,16 +1,14 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './App.css';
+import './styles.css';
 
-function App() {
-  return (
+const App = () => (
     <div className="app">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -19,7 +17,6 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
+);
 
 export default App;
