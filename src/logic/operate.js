@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-const operate = (numberOne,numberTwo,operation) => {
+const operate = (numberOne, numberTwo, operation) => {
   let data;
 
   switch (operation) {
@@ -24,7 +24,6 @@ const operate = (numberOne,numberTwo,operation) => {
   }
 
   return data;
-
-}
+};
 
 export default operate;

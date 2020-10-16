@@ -5,15 +5,14 @@ import '../styles/styles.css';
 import Display from './Display';
 // eslint-disable-next-line no-unused-vars
 import ButtonPanel from './ButtonPanel';
-// eslint-disable-next-line
+// eslint-disable-next-line no-unused-vars
 import calculate from '../logic/calculate';
 
-const App = () => {
-  return (
+const App = () => (
     <div className="App">
       <Display />
       <ButtonPanel />
     </div>
-)};
+);
 
 export default App;

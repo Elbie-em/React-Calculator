@@ -1,7 +1,7 @@
 import operate from './operate';
 
-const calculate = (dataObj,btnName) => {
-  let { total, next, operation } = dataObj;
+const calculate = (dataObj, btnName) => {
+  const { total, next, operation } = dataObj;
 
   const operationSyms = ['+', '-', 'x', '÷', '%'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -96,7 +96,6 @@ const calculate = (dataObj,btnName) => {
   }
 
   return [total, next, operation];
-
-}
+};
 
 export default calculate;
