@@ -2,6 +2,7 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import Button from './Button';
+import '../styles/styles.css';
 
 const buttonSyms = [
   ['AC', '+/-', '%', '÷'],
@@ -11,11 +12,36 @@ const buttonSyms = [
   ['0', '.', '='],
 ];
 
+const operatorSyms = {
+  divide: '÷',
+  multiply: 'X',
+  substract: '-',
+  add: '+',
+};
+
+const checkIfOperator = (sym, obj) => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const key in obj) {
+    if (sym === obj[key]) {
+      return true;
+    }
+  }
+  return false;
+};
+
 const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
-        <div key={group}>
-          {group.map(sym => <Button key={sym} name={sym}>{sym}</Button>)}
+        <div className="btn-group" key={group}>
+          {group.map((sym) => {
+            if (checkIfOperator(sym, operatorSyms)) {
+              return <Button key={sym} name={sym} wide={false} />;
+            }
+            if (sym === '0') {
+              return <Button key={sym} name={sym} color="grey" wide={true} />;
+            }
+            return <Button key={sym} name={sym} color="grey" wide={false} />;
+          })}
         </div>
       ))}
     </div>
