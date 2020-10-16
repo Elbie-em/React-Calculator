@@ -23,8 +23,6 @@
   padding-right: 10px;
 }
 
-
-
 .btn-group {
   display: flex;
   flex-direction: row;
@@ -45,6 +43,10 @@
   width: 50%;
 }
 
-.btn-sign {
+.btn-orange {
   background-color: #f5913e;
+}
+
+.btn-grey {
+  background-color: #e0e0e0;
 }
