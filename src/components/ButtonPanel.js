@@ -16,30 +16,31 @@ const operatorSyms = {
   divide: '÷',
   multiply: 'X',
   substract: '-',
-  add:'+'
-}
+  add: '+',
+};
 
-const checkIfOperator = (sym,obj) => {
+const checkIfOperator = (sym, obj) => {
+  // eslint-disable-next-line no-restricted-syntax
   for (const key in obj) {
-    if(sym === obj[key]){
-      return true
+    if (sym === obj[key]) {
+      return true;
     }
   }
-  return false
-}
+  return false;
+};
 
 const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
         <div className="btn-group" key={group}>
           {group.map((sym) => {
-            if (checkIfOperator(sym,operatorSyms)){
-              return <Button key={sym} name={sym} wide={false} />
+            if (checkIfOperator(sym, operatorSyms)) {
+              return <Button key={sym} name={sym} wide={false} />;
             }
-            if(sym === '0'){
+            if (sym === '0') {
               return <Button key={sym} name={sym} color="grey" wide={true} />;
             }
-            return <Button key={sym} name={sym} color="grey" wide={false} />
+            return <Button key={sym} name={sym} color="grey" wide={false} />;
           })}
         </div>
       ))}
