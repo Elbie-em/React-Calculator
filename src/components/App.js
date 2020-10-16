@@ -15,5 +15,5 @@ const App = () => {
       <ButtonPanel />
     </div>
 )};
-
+console.log(calculate({total:1,next:2,operation:'÷'},'='))
 export default App;
