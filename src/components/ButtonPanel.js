@@ -12,11 +12,35 @@ const buttonSyms = [
   ['0', '.', '='],
 ];
 
+const operatorSyms = {
+  divide: '÷',
+  multiply: 'X',
+  substract: '-',
+  add:'+'
+}
+
+const checkIfOperator = (sym,obj) => {
+  for (const key in obj) {
+    if(sym === obj[key]){
+      return true
+    }
+  }
+  return false
+}
+
 const ButtonPanel = () => (
     <div>
       {buttonSyms.map(group => (
         <div className="btn-group" key={group}>
-          {group.map(sym => <Button key={sym} name={sym}>{sym}</Button>)}
+          {group.map((sym) => {
+            if (checkIfOperator(sym,operatorSyms)){
+              return <Button key={sym} name={sym} wide={false} />
+            }
+            if(sym === '0'){
+              return <Button key={sym} name={sym} color="grey" wide={true} />;
+            }
+            return <Button key={sym} name={sym} color="grey" wide={false} />
+          })}
         </div>
       ))}
     </div>
