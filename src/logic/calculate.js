@@ -3,10 +3,10 @@ import operate from './operate';
 const calculate = (dataObj, btnName) => {
   const { total, next, operation } = dataObj;
 
-  const operationSyms = ['+', '-', 'x', '÷', '%'];
+  const operationSyms = ['+', '-', 'X', '÷', '%'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-  if (operationSyms.includes(btnName) && total && next) {
+  if (operationSyms.includes(btnName) && next && total) {
     return {
       total: operate(total, next, operation).toString(),
       operation: btnName,
@@ -14,7 +14,7 @@ const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (operationSyms.includes(btnName) && total && !next) {
+  if (operationSyms.includes(btnName) && !next && total) {
     return {
       total,
       operation: btnName,
@@ -22,7 +22,7 @@ const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (operationSyms.includes(btnName) && !total && !next) {
+  if (operationSyms.includes(btnName) && next && !total) {
     return {
       total: next,
       operation: btnName,
@@ -99,3 +99,4 @@ const calculate = (dataObj, btnName) => {
 };
 
 export default calculate;
+
