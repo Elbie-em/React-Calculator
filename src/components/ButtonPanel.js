@@ -1,6 +1,4 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import Button from './Button';
 import '../styles/styles.css';
 
@@ -30,21 +28,21 @@ const checkIfOperator = (sym, obj) => {
 };
 
 const ButtonPanel = () => (
-    <div>
-      {buttonSyms.map(group => (
-        <div className="btn-group" key={group}>
-          {group.map((sym) => {
-            if (checkIfOperator(sym, operatorSyms)) {
-              return <Button key={sym} name={sym} wide={false} />;
-            }
-            if (sym === '0') {
-              return <Button key={sym} name={sym} color="grey" wide={true} />;
-            }
-            return <Button key={sym} name={sym} color="grey" wide={false} />;
-          })}
-        </div>
-      ))}
-    </div>
+  <div>
+    {buttonSyms.map(group => (
+      <div className="btn-group" key={group}>
+        {group.map(sym => {
+          if (checkIfOperator(sym, operatorSyms)) {
+            return <Button key={sym} name={sym} wide={false} />;
+          }
+          if (sym === '0') {
+            return <Button key={sym} name={sym} color="grey" wide />;
+          }
+          return <Button key={sym} name={sym} color="grey" wide={false} />;
+        })}
+      </div>
+    ))}
+  </div>
 );
 
 export default ButtonPanel;

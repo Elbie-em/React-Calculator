@@ -8,10 +8,10 @@ const operate = (numberOne, numberTwo, operation) => {
   switch (operation) {
     case '÷':
       try {
-        data = num1.div(num2); 
+        data = num1.div(num2);
       } catch (e) {
         data = 'ERROR';
-      }  
+      }
       break;
     case 'X':
       data = num1.times(num2);

@@ -99,4 +99,3 @@ const calculate = (dataObj, btnName) => {
 };
 
 export default calculate;
-
