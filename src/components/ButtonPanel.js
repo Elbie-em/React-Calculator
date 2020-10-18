@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
 import PropType from 'prop-types';
+import Button from './Button';
 import '../styles/styles.css';
 
 const buttonSyms = [
@@ -28,18 +28,18 @@ const checkIfOperator = (sym, obj) => {
   return false;
 };
 
-const ButtonPanel = ({clickHandler}) => (
+const ButtonPanel = ({ clickHandler }) => (
   <div>
     {buttonSyms.map(group => (
       <div className="btn-group" key={group}>
         {group.map(sym => {
           if (checkIfOperator(sym, operatorSyms)) {
-            return <Button key={sym} name={sym} wide={false} handleClick={clickHandler}/>;
+            return <Button key={sym} name={sym} wide={false} handleClick={clickHandler} />;
           }
           if (sym === '0') {
-            return <Button key={sym} name={sym} color="grey" wide handleClick={clickHandler}/>;
+            return <Button key={sym} name={sym} color="grey" wide handleClick={clickHandler} />;
           }
-          return <Button key={sym} name={sym} color="grey" wide={false} handleClick={clickHandler}/>;
+          return <Button key={sym} name={sym} color="grey" wide={false} handleClick={clickHandler} />;
         })}
       </div>
     ))}
