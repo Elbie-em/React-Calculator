@@ -5,7 +5,7 @@ Building a calculator for Math-magicians Inc bootstrapped with [Create React App
 
 > Click [here](https://mminc-calc.herokuapp.com/) for live demo
 
-![screenshot](public/app-img.png)
+![screenshot](public/app-screenshot.png)
 
 ## Built With
 - React
@@ -40,7 +40,7 @@ cd into the project directory, and you can run:
 ```
 $ npm install
 
-Installs on dependencies
+Installs all dependencies
 ```
 
 ```
@@ -52,6 +52,45 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 ```
 
+## Deployment
+
+Instructions from [Heroku Buildpack](https://github.com/mars/create-react-app-buildpack).
+
+Generate a react app.
+replace *$APP_NAME* with the name for your unique app.
+
+```
+npx create-react-app@3.x $APP_NAME
+```
+Create the heroku app.
+replace *$APP_NAME* with the name for your unique app.
+
+```
+heroku create $APP_NAME --buildpack mars/create-react-app
+```
+
+Deploy.
+
+```
+git push heroku master
+```
+Visit the app's public URL in your browser.
+
+```
+heroku open
+```
+
+##Application features
+
+*The user is able to perform the following mathemactical operations*
+  * Division
+  * Multiplication
+  * Addition
+  * Subtraction
+  * Percentage
+  * **AC** clears all data
+  
+   
 ## Author
 
 👤 **Elbie Moonga**
