@@ -23,10 +23,11 @@ class App extends React.Component {
   }
 
   render () {
+    const {total, next, operation}= this.state;
      return (
       <div className="App">
-        <Display />
-        <ButtonPanel />
+        <Display result={next ||operation || total || '0'}/>
+        <ButtonPanel clickHandler={this.handleClick}/>
       </div>
      );
   }
