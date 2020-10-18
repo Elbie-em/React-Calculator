@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import PropType from 'prop-types';
 import '../styles/styles.css';
 
 const buttonSyms = [
