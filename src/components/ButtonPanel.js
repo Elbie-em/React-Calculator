@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import Button from './Button';
 import '../styles/styles.css';
 
@@ -27,22 +28,30 @@ const checkIfOperator = (sym, obj) => {
   return false;
 };
 
-const ButtonPanel = () => (
+const ButtonPanel = ({ clickHandler }) => (
   <div>
     {buttonSyms.map(group => (
       <div className="btn-group" key={group}>
         {group.map(sym => {
           if (checkIfOperator(sym, operatorSyms)) {
-            return <Button key={sym} name={sym} wide={false} />;
+            return <Button key={sym} name={sym} wide={false} handleClick={clickHandler} />;
           }
           if (sym === '0') {
-            return <Button key={sym} name={sym} color="grey" wide />;
+            return <Button key={sym} name={sym} color="grey" wide handleClick={clickHandler} />;
           }
-          return <Button key={sym} name={sym} color="grey" wide={false} />;
+          return <Button key={sym} name={sym} color="grey" wide={false} handleClick={clickHandler} />;
         })}
       </div>
     ))}
   </div>
 );
+
+ButtonPanel.propTypes = {
+  clickHandler: PropType.func,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: null,
+};
 
 export default ButtonPanel;

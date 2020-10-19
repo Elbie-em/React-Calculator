@@ -2,11 +2,14 @@ import React from 'react';
 import PropType from 'prop-types';
 import '../styles/styles.css';
 
-const Button = ({ name, color, wide }) => (
+const Button = ({
+  name, color, wide, handleClick,
+}) => (
   <button
     type="button"
     className={`btn btn-${color} ${wide ? 'btn-wide' : ''}`}
     color={color}
+    onClick={() => handleClick(name)}
   >
     {name}
   </button>
@@ -14,12 +17,15 @@ const Button = ({ name, color, wide }) => (
 
 Button.propTypes = {
   name: PropType.string.isRequired,
-  wide: PropType.bool.isRequired,
+  wide: PropType.bool,
   color: PropType.string,
+  handleClick: PropType.func,
 };
 
 Button.defaultProps = {
   color: 'orange',
+  wide: false,
+  handleClick: null,
 };
 
 
