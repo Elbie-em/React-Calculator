@@ -80,7 +80,7 @@ Visit the app's public URL in your browser.
 heroku open
 ```
 
-##Application features
+## Application features
 
 *The user is able to perform the following mathemactical operations*
   * Division
